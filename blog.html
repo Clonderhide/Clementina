@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - La Clementina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navbar Fija -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-red-600 font-playfair">
+                    🍕 La Clementina
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-800 hover:text-red-600 transition-colors duration-200 font-semibold">Inicio</a>
+                    <a href="menu.html" class="text-gray-800 hover:text-red-600 transition-colors duration-200 font-semibold">Menú</a>
+                    <a href="blog.html" class="text-red-600 font-semibold border-b-2 border-red-600">Blog</a>
+                </div>
+                <!-- Menú móvil -->
+                <button class="md:hidden text-gray-800" id="mobileMenuBtn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Menú móvil desplegable -->
+            <div class="hidden md:hidden mt-4 pb-2" id="mobileMenu">
+                <a href="index.html" class="block py-2 text-gray-800 hover:text-red-600 transition-colors">Inicio</a>
+                <a href="menu.html" class="block py-2 text-gray-800 hover:text-red-600 transition-colors">Menú</a>
+                <a href="blog.html" class="block py-2 text-red-600 font-semibold">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header del Blog -->
+    <section class="mt-20 py-16 bg-gradient-to-r from-red-600 to-red-800 text-white text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">Nuestro Blog</h1>
+        <p class="text-xl md:text-2xl font-light">Descubre el arte detrás de nuestras pizzas</p>
+    </section>
+
+    <!-- Artículos del Blog -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <!-- Artículo 1 -->
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-12 transform transition-all duration-300 hover:shadow-2xl">
+                <div class="h-64 md:h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&q=80');"></div>
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center mb-4 text-sm text-gray-500">
+                        <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full font-semibold">Historia</span>
+                        <span class="ml-4">15 de Febrero, 2026</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">La Historia de la Pizza Napolitana</h2>
+                    <div class="prose max-w-none text-gray-700 leading-relaxed">
+                        <p class="mb-4 text-lg">
+                            La pizza napolitana es mucho más que un simple plato; es una tradición que se remonta al siglo XVIII en Nápoles, Italia. Nacida en los barrios populares, esta delicia culinaria conquistó primero a los napolitanos y luego al mundo entero.
+                        </p>
+                        <p class="mb-4">
+                            La <strong>Vera Pizza Napoletana</strong> tiene reglas muy específicas: debe ser cocida en un horno de leña a 450°C durante 60-90 segundos, la masa debe fermentar al menos 8 horas, y los ingredientes deben ser de la más alta calidad.
+                        </p>
+                        <blockquote class="border-l-4 border-red-600 pl-6 my-6 italic text-gray-600 text-lg">
+                            "La pizza es como la vida: simple en su esencia, pero perfecta cuando se hace con pasión y los mejores ingredientes."
+                        </blockquote>
+                        <p class="mb-4">
+                            En <span class="font-bold text-red-600">La Clementina</span>, seguimos estas tradiciones centenarias. Nuestros maestros pizzaiolos han sido entrenados en Nápoles, y cada pizza que sale de nuestro horno de leña es un homenaje a esta herencia italiana.
+                        </p>
+                        <p>
+                            La pizza Margherita, creada en 1889 en honor a la reina Margherita de Saboya, representa los colores de la bandera italiana: el rojo del tomate, el blanco de la mozzarella y el verde de la albahaca. Esta combinación simple pero perfecta sigue siendo una de nuestras pizzas más populares.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-12 transform transition-all duration-300 hover:shadow-2xl">
+                <div class="h-64 md:h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=1200&q=80');"></div>
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center mb-4 text-sm text-gray-500">
+                        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full font-semibold">Proceso</span>
+                        <span class="ml-4">10 de Febrero, 2026</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Nuestro Proceso Artesanal</h2>
+                    <div class="prose max-w-none text-gray-700 leading-relaxed">
+                        <p class="mb-4 text-lg">
+                            En La Clementina, cada pizza es una obra de arte creada con dedicación y técnica. Nuestro proceso comienza mucho antes de que la pizza llegue a tu mesa.
+                        </p>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">1. La Masa</h3>
+                        <p class="mb-4">
+                            Utilizamos solo harina italiana tipo "00", agua, sal marina y levadura natural. La masa se amasa a mano durante 15 minutos y luego fermenta durante <strong>48 horas</strong> a temperatura controlada. Esta fermentación lenta desarrolla sabores complejos y una textura única.
+                        </p>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">2. El Estirado</h3>
+                        <p class="mb-4">
+                            Nuestros pizzaiolos estiran la masa exclusivamente con las manos, nunca con rodillo. Esta técnica tradicional, conocida como "stiratura", crea la característica base delgada en el centro y el borde grueso y aireado (cornicione).
+                        </p>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">3. El Horno de Leña</h3>
+                        <p class="mb-4">
+                            Nuestro horno de leña alcanza los 450°C, cocinando cada pizza en apenas 90 segundos. El calor intenso y directo crea esa combinación perfecta de base crujiente y bordes suaves y esponjosos que caracteriza a la verdadera pizza napolitana.
+                        </p>
+                        <blockquote class="border-l-4 border-green-600 pl-6 my-6 italic text-gray-600 text-lg">
+                            "La diferencia entre una buena pizza y una excelente pizza está en los detalles: la temperatura del horno, el tiempo de fermentación y, sobre todo, la pasión del pizzaiolo."
+                        </blockquote>
+                        <p>
+                            Cada pizza es vigilada constantemente durante su cocción, rotándola para asegurar una cocción uniforme. El resultado es una pizza con manchas características (leopardo) que indican una cocción perfecta.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden mb-12 transform transition-all duration-300 hover:shadow-2xl">
+                <div class="h-64 md:h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=1200&q=80');"></div>
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center mb-4 text-sm text-gray-500">
+                        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-semibold">Ingredientes</span>
+                        <span class="ml-4">5 de Febrero, 2026</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Ingredientes Importados de Italia</h2>
+                    <div class="prose max-w-none text-gray-700 leading-relaxed">
+                        <p class="mb-4 text-lg">
+                            La calidad de nuestros ingredientes es la base de nuestro éxito. En La Clementina, no escatimamos en calidad: importamos directamente desde Italia los ingredientes más importantes.
+                        </p>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Tomates San Marzano DOP</h3>
+                        <p class="mb-4">
+                            Nuestros tomates provienen de las laderas del Vesubio, en la región de Campania. Los <strong>San Marzano DOP</strong> son reconocidos mundialmente por su sabor dulce, bajo contenido de semillas y textura carnosa. Estos tomates se cultivan en suelo volcánico rico en minerales, lo que les da su sabor único.
+                        </p>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Mozzarella di Bufala Campana</h3>
+                        <p class="mb-4">
+                            Para nuestras pizzas premium, utilizamos mozzarella di bufala certificada, elaborada con leche de búfala de agua de la región de Campania. Esta mozzarella tiene un sabor más intenso y cremoso que la mozzarella tradicional, y se derrite de manera perfecta en el horno.
+                        </p>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Aceite de Oliva Extra Virgen</h3>
+                        <p class="mb-4">
+                            Nuestro aceite de oliva proviene de las colinas de Toscana. Es un aceite de primera prensada en frío, con notas afrutadas y un toque picante que realza el sabor de cada pizza sin dominarla.
+                        </p>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Harina Tipo "00"</h3>
+                        <p class="mb-4">
+                            La harina italiana tipo "00" es la más refinada disponible, con un contenido de proteína perfecto para crear una masa elástica y manejable. Esta harina es esencial para lograr la textura auténtica de la pizza napolitana.
+                        </p>
+                        <blockquote class="border-l-4 border-blue-600 pl-6 my-6 italic text-gray-600 text-lg">
+                            "Los mejores ingredientes no necesitan disculpas. Hablan por sí solos en cada bocado."
+                        </blockquote>
+                        <p>
+                            Además de estos ingredientes principales, también importamos otros productos italianos como el prosciutto di Parma, el queso gorgonzola, las anchoas del Cantábrico preparadas al estilo italiano, y especias como orégano siciliano y albahaca fresca de Liguria.
+                        </p>
+                        <p class="mt-6">
+                            En La Clementina, creemos que la autenticidad comienza con los ingredientes. Por eso, cada semana recibimos un envío directo desde Italia, asegurándonos de que nuestros clientes disfruten del verdadero sabor italiano en cada visita.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Información -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">La Clementina</h3>
+                    <p class="text-gray-400 mb-4">Pizzas italianas auténticas desde 2008</p>
+                    <p class="text-gray-400">Calle Italia, 123<br>Madrid, España</p>
+                </div>
+                <!-- Horario -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Horario</h3>
+                    <p class="text-gray-400 mb-2">Lunes - Jueves: 18:00 - 23:00</p>
+                    <p class="text-gray-400 mb-2">Viernes - Sábado: 18:00 - 00:00</p>
+                    <p class="text-gray-400">Domingo: 12:00 - 23:00</p>
+                </div>
+                <!-- Redes Sociales -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200">
+                            <span class="text-white">f</span>
+                        </a>
+                        <a href="#" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200">
+                            <span class="text-white">@</span>
+                        </a>
+                        <a href="#" class="bg-red-600 hover:bg-red-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-200">
+                            <span class="text-white">in</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 La Clementina. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para menú móvil -->
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
